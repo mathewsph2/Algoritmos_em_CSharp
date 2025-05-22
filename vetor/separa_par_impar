@@ -1,0 +1,54 @@
+//  Faça um programa que leia um conjunto de 20 valores e armazene-os num vetor V.
+//  Particione-o em dois outros vetores, P e I, conforme os valores de V forem pares ou ímpares.
+//  No final, imprima os valores dos 3 vetores.
+
+class Program
+{
+
+    static void Main(string[] args)
+    {
+        int[] vetor1 = new int[5];
+        int[] vetorPares = new int[5];
+        int[] vetorImpares = new int[5];
+
+        // Lendo o vetor
+
+        int inicialImpares = 0;
+        int inicialPar = 0;
+        for (int i = 0; i < vetor1.Length; i++)
+        {
+            Console.WriteLine("informe o {0}º valor:", i + 1);
+            vetor1[i] = Convert.ToInt32(Console.ReadLine());
+
+
+            if (vetor1[i] % 2 == 0)
+            {
+                vetorPares[inicialPar] = vetor1[i];
+                inicialPar++;
+            }
+            else
+            {
+                vetorImpares[inicialImpares] = vetor1[i];
+                inicialImpares++;
+            }
+        }
+
+        // Imprimindo o vetor original
+        for (int i = 0; i < vetor1.Length; i++)
+        {
+            Console.WriteLine("O vetor informado: {0}", vetor1[i]);
+        }
+
+        // Imprimindo o vetor par
+        for (int i = 0; i < inicialPar; i++)
+        {
+            Console.WriteLine("O vetor Par foi: {0}", vetorPares[i]);
+        }
+
+        // Imprimindo o vetor Impar
+        for (int i = 0; i < inicialImpares; i++)
+        {
+            Console.WriteLine("O vetor Impar foi: {0}", vetorImpares[i]);
+        }
+    }
+}
