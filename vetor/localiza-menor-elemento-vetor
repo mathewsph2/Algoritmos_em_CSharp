@@ -1,0 +1,32 @@
+// 3) Programa que lê um vetor com 15 valores reais e ncontra o menor elemento do vetor e a sua posição dentro do vetor, 
+// mostrando: "O menor elemento do vetor está na posição XXXX e tem o valor YYYYY."
+
+class Program
+{
+    const int QTDE_ELEMENTOS = 5;
+    public static void Main(string[] args)
+    {
+        double[] Vetor = new double[QTDE_ELEMENTOS];
+        double menor;
+        int indice=0;
+
+        // Preencher o vetor com valores informados pelo usuário:
+        for (int i = 0; i < QTDE_ELEMENTOS; i++)
+        {
+            Console.WriteLine("Informe o {0}º número real", i + 1);
+            Vetor[i] = Convert.ToDouble(Console.ReadLine());
+        }
+
+        menor = Vetor[0];
+        // Preencher o vetor com valores informados pelo usuário:
+        for (int i = 0; i < QTDE_ELEMENTOS; i++)
+        {
+            if (Vetor[i] < menor)
+            {
+                menor = Vetor[i];
+                indice = i;
+            } 
+        }
+        Console.WriteLine("O menor elemento do vetor está na posição {0} e tem o valor {1}",indice, menor);
+    }
+}
