@@ -1,0 +1,30 @@
+// 2) Faça um procedimento que faça a leitura um vetor de 10 elementos inteiros
+// e imprima somente os valores armazenados nos índices pares.
+
+namespace ImprimeIndicesParesVetor
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            ImprimeIndicesPares();
+        }
+
+        public static void ImprimeIndicesPares()
+        {
+            const int TAMANHO_VETOR = 10;
+
+            int[] vetor = new int[TAMANHO_VETOR];
+            for (int i = 0; i < vetor.Length; i++)
+            {
+                Console.WriteLine("Informe o {0}º valor do vetor:", i + 1);
+                vetor[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for (int i = 0; i < vetor.Length; i += 2)
+            {
+                Console.Write("{0} ", vetor[i]);
+            }
+        }
+    }
+}
