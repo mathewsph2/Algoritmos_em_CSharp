@@ -1,0 +1,65 @@
+// 6) Dada uma tabela com as notas de uma turma de 20 alunos, faça funções que retornem:
+// a) A média da turma.
+// b) a quantidade de alunos aprovados (>=60)
+// c) a quantidade de alunos reprovados.(< 60)
+
+namespace Funcao_Media_Vetor
+{
+    public class Program
+    {
+        const int NUMERO_ALUNOS = 6;
+
+        public static void Main(string[] args)
+        {
+            double[] Vetor = new double[NUMERO_ALUNOS];
+
+            for (int i = 0; i < Vetor.Length; i++)
+            {
+                Console.WriteLine("Informe a {0}ª nota(0-100):", i + 1);
+                Vetor[i] = Convert.ToDouble(Console.ReadLine());
+            }
+
+            Console.WriteLine("A média da turma foi de {0:N2}.", MediaAlunos(Vetor));
+            Console.WriteLine("Número de aprovados: {0}.", QtdeAprovados(Vetor));
+            Console.WriteLine("Número de reprovados: {0}.", QtdeReprovados(Vetor));
+        }
+
+        public static double MediaAlunos(double[] vet)
+        {
+            double media = 0;
+            for (int i = 0; i < vet.Length; i++)
+            {
+                media = media + vet[i];
+            }
+            media = media / NUMERO_ALUNOS;
+
+            return media;
+        }
+
+        public static int QtdeAprovados(double[] vet)
+        {
+            int CountAprovados = 0;
+            for (int i = 0; i < vet.Length; i++)
+            {
+                if (vet[i] >= 60)
+                {
+                    CountAprovados++;
+                }
+            }
+            return CountAprovados;
+        }
+
+        public static int QtdeReprovados(double[] vet)
+        {
+            int CountReprovados = 0;
+            for (int i = 0; i < vet.Length; i++)
+            {
+                if (vet[i] < 60)
+                {
+                    CountReprovados++;
+                }
+            }
+            return CountReprovados;
+        }
+    }
+}
