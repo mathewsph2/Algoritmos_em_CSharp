@@ -1,0 +1,32 @@
+// 2) função que receberá como parâmetro a string e retornará o número de espaços em branco que a string contém.
+
+namespace EspacosEmBranco
+{
+    public class Program
+    {
+        public static int ContaEspacosBranco(string palavra)
+        {
+            int countBrancos = 0;
+
+            for (int i = 0; i < palavra.Length; i++)
+            {
+                if ((palavra[i]) == (' '))
+                {
+                    countBrancos++;
+                }
+            }
+            return countBrancos;
+        }
+
+        public static void Main(string[] args)
+        {
+            string frase;
+
+            Console.WriteLine("Informe uma sentença: ");
+            frase = Console.ReadLine();
+
+            Console.WriteLine("O número de espaços em branco informados foi de {0}: ", ContaEspacosBranco(frase));
+        }
+    }
+}
+
