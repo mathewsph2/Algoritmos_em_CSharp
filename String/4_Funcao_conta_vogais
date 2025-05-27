@@ -1,0 +1,34 @@
+// 4) Refaça o programa anterior criando uma função que receberá como parâmetro a string
+// e retornará o número de vogais que a string contem.
+
+namespace NumeroVogais
+{
+    public class Program
+    {
+
+        public static int ContaVogais(string palavra)
+        {
+            int countVogais = 0;
+
+            for (int i = 0; i < palavra.Length; i++)
+            {
+                if ((palavra[i]) == ('a') || (palavra[i]) == ('e') || (palavra[i]) == ('i') || (palavra[i]) == ('o') || (palavra[i]) == ('u'))
+                {
+                    countVogais++;
+                }
+            }
+            return countVogais;
+        }
+
+        public static void Main(string[] args)
+        {
+            string frase;
+
+            Console.WriteLine("Informe uma string: ");
+            frase = Console.ReadLine();
+
+            Console.WriteLine("O número de vogais da string foi {0}. ", ContaVogais(frase));
+        }
+    }
+}
+
