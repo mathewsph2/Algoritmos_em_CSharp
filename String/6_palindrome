@@ -1,0 +1,35 @@
+// 6) Escreva uma função que receba uma cadeia de caracteres de tamanho máximo 100, e retorne true se esta cadeia é
+// uma palíndrome e false caso contrário. Uma palavra é dita ser palíndrome se a sequência de seus caracteres da
+// esquerda para a direita é igual à seqüência de seus caracteres da direita para a esquerda. Ex.: arara, asa.
+
+class Program
+{
+    public static void Main (string[] args)
+    {
+        string cadeia;
+        string aux=""; 
+        // Inicialização do aux como uma string vazia ("") em vez de um espaço (" "):
+        int i;
+        
+        Console.WriteLine("Informe uma cadeia de caracteres de no máximo 100 dígitos");
+        cadeia = Console.ReadLine();
+
+        for (i = cadeia.Length -1; i  >= 0; i--)
+        {
+           
+            aux = aux + cadeia[i];
+        }
+
+         Console.WriteLine("AUX: {0}", aux);
+         Console.WriteLine("Cadeia original: {0}", cadeia);
+
+        if (aux == cadeia)
+        {
+            Console.WriteLine("Cadeia Palíndrome!");
+        }
+        else 
+        {
+            Console.WriteLine("Cadeia não Palíndrome!");
+        }
+    }
+}
