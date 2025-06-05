@@ -1,0 +1,57 @@
+// 3) Faça um programa que leia uma matriz quadrada de
+// dimensão 10, uma função que encontre o maior valor desta
+// matriz e uma função que encontre o menor valor. Imprima os
+// valores encontrados na função principal.
+
+class Program
+{
+
+    public static void Main(string[] args)
+    {
+        int[,] matriz = new int[3, 3];
+
+        int MaiorValor;
+        int MenorValor;
+
+        // Lendo a matriz:
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                Console.WriteLine("Informe o valor para matriz na posição {0}, {1}: ", i, j);
+                matriz[i, j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        MaiorValor = matriz[0, 0];
+        MenorValor = matriz[0, 0];
+
+        // Imprimindo a matriz:
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                Console.Write("{0} ", matriz[i, j]);
+
+                // Encontrando o maior valor:
+                if (matriz[i, j] > MaiorValor)
+                {
+                    MaiorValor = matriz[i, j];
+                }
+
+                // Encontrando o menor valor:
+                if (matriz[i, j] < MenorValor)
+                {
+                    MenorValor = matriz[i, j];
+                }
+
+            }
+            Console.WriteLine();
+        }
+
+        Console.WriteLine("O maior valor informado foi {0}", MaiorValor);
+         Console.WriteLine("O menor valor informado foi {0}", MenorValor);
+    }
+}
+
+// Faltando fazer em forma de função 
