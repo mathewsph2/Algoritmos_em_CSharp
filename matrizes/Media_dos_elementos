@@ -1,0 +1,33 @@
+// Faça um programa que leia uma matriz 2x3 de números reais e imprima a média de elementos dessa matriz.
+// Exercício 01 do slide do youtube da 17ª semana
+
+
+class Program
+{
+
+    public static void Main(string[] args)
+    {
+        double[,] matriz = new double[2, 3];
+
+        double media = 0;
+        int count = 0;
+
+        // Lendo a matriz:
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                Console.WriteLine("Informe o valor para matriz na posição {0}, {1}: ", i, j);
+                matriz[i, j] = Convert.ToInt32(Console.ReadLine());
+
+                media = media + matriz[i, j];
+
+                count++;
+            }
+        }
+        media = media / count;
+
+        Console.WriteLine("A média dos valores da matriz foi {0}.", media);
+
+    }
+}
