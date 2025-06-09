@@ -1,0 +1,56 @@
+class Program
+{
+    static void LeMatriz(int[,] matriz)
+    {
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                Console.Write("Elemento {0}, {1}: ", i , j);
+                matriz[i,j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        const int TAMANHO = 3;
+        int[,] mat1 = new int[TAMANHO,TAMANHO];
+        int[,] mat2 = new int[TAMANHO,TAMANHO];
+
+        Console.WriteLine("Matriz:");
+        LeMatriz(mat1);
+
+        Console.WriteLine("Matriz informada:");
+        Imprimir(mat1);
+
+        InverterLinhasColunas(mat1, mat2);
+
+        Console.WriteLine("Matriz após inversão:");
+        Imprimir(mat2);
+    }
+
+    static void Imprimir(int[,] mat)
+    {
+        for (int i = 0; i < mat.GetLength(0); i++)
+        {
+            for (int j = 0; j < mat.GetLength(1); j++)
+            {
+                Console.Write("{0,5} ", mat[i,j]);
+            }
+
+            Console.WriteLine();
+        }
+    }
+
+    static void InverterLinhasColunas(int[,] matOrigem, int[,] matDestino)
+    {
+        for (int i = 0; i < matOrigem.GetLength(0); i++)
+        {
+            for (int j = 0; j < matOrigem.GetLength(1); j++)
+            {
+                matDestino[j,i] = matOrigem[i,j];
+            }
+        }
+    }
+}
