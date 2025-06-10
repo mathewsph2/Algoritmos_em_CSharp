@@ -1,0 +1,52 @@
+// 2) Faça um programa que leia uma matriz 7 x 5 e imprima a terceira coluna.
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        // mudar para 7
+        const int TamanhoLinhas = 7;
+        // mudar para 5
+        const int TamanhoColunas = 5;
+
+        int[,] matriz = new int[TamanhoLinhas, TamanhoColunas];
+
+        // Lendo a Matriz
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                Console.WriteLine("Informe o valor {0}, {1}:", i, j);
+                matriz[i, j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        // Imprimindo a matriz original
+        Console.WriteLine("Imprimindo a Matriz original:");
+
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                Console.Write("{0} ", matriz[i, j]);
+            }
+            Console.WriteLine();
+        }
+        
+        // Imprimindo a terceira coluna
+          Console.WriteLine("Imprimindo a terceira coluna:");
+
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                if (j == 2)
+                {
+                     Console.Write("{0} ", matriz[i, j]);
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
