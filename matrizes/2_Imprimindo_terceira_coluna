@@ -50,3 +50,21 @@ class Program
     }
 }
 
+
+
+
+/*      Imprimindo a terceira coluna sem if e com apenas um FOR
+        
+        Console.WriteLine("Imprimindo a terceira coluna:");
+
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+                     Console.Write("{0} ", matriz[i, 2]);
+            
+            Console.WriteLine();
+        }
+*/
+
+
+
+
