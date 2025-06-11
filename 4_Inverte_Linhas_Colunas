@@ -1,0 +1,62 @@
+// 4) Faça um programa que leia uma matriz quadrada de tamanho 10 
+// e um procedimento que inverta as linhas pelas colunas em uma segunda matriz de mesmo tamanho.
+// Imprima ao final a segunda matriz.
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        // Mudar para 10
+        const int TAMANHOLINHAS = 3;
+        const int TAMANHOCOLUNAS = 3;
+        
+        int [,] matriz = new int [TAMANHOLINHAS, TAMANHOCOLUNAS];
+        int [,] MatrizInversa = new int [TAMANHOLINHAS, TAMANHOCOLUNAS];
+
+
+        // Ler a Matriz 
+        for (int i=0; i<matriz.GetLength(0); i++)
+        {
+            for (int j=0; j<matriz.GetLength(1); j++)
+            {
+                Console.WriteLine("Informe o numero {0}, {1}:", i, j);
+                matriz[i,j] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+        // Invertendo a segunda Matriz 
+        for (int i=0; i<matriz.GetLength(0); i++)
+        {
+            for (int j=0; j<matriz.GetLength(1); j++)
+            {
+               MatrizInversa[j , i] = matriz[i, j];
+            }
+        }
+
+        // Imprimindo a matriz original
+        Console.WriteLine("Impressão da primeira matriz: ");
+
+        for (int i=0; i<matriz.GetLength(0); i++)
+        {
+            for (int j=0; j<matriz.GetLength(1); j++)
+            {
+                Console.Write("{0} ",matriz[i, j]);
+                
+            }
+            Console.WriteLine(" ");
+        }
+
+        // Imprimindo a segunda matriz de linhas e colunas invertidas
+        Console.WriteLine("Imprimindo a segunda matriz de linhas e colunas invertidas:");
+
+        for (int i=0; i<MatrizInversa.GetLength(0); i++)
+        {
+            for (int j=0; j<MatrizInversa.GetLength(1); j++)
+            {
+                Console.Write("{0} ",MatrizInversa[i, j]);
+                
+            }
+            Console.WriteLine(" ");
+        }
+    }
+}
