@@ -1,0 +1,33 @@
+// Faça uma função que receba por parâmetro um vetor de números inteiros
+// e retorne a média dos elementos pertencentes à este vetor:
+
+namespace FuncaoMediaVetor
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            const int TAMANHO = 10;
+
+            int[] vetor = new int[TAMANHO];
+
+            Console.WriteLine("A média dos valores informados no vetor foi {0}", MediaVetor(vetor));
+        }
+
+        // Função criada do tipo double pois retornará a média, e o vetor em inteiro conforme o enunciado; 
+        public static double MediaVetor(int[] vet)
+        {
+            double media = 0;
+
+            for (int i = 0; i < vet.Length; i++)
+            {
+                Console.WriteLine("Informe o º{0} elemento do vetor:", i + 1);
+                vet[i] = Convert.ToInt32(Console.ReadLine());
+                media = media + vet[i];
+            }
+
+            return media / vet.Length;
+        }
+    }
+}
+
