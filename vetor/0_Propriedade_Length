@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------------------
+// A propriedade Length retorna o tamanho do vetor, string
+-------------------------------------------------------------------------------------------
+Tipo  -  	Propriedade	Retorno  -	    Exemplo
+Array	    Length	Nº de elementos	    int[5].Length → 5
+String	  Length	Nº de caracteres	  "abc".Length → 3
+-------------------------------------------------------------------------------------------
+int[] numeros = { 10, 20, 30, 40, 50 };
+Console.WriteLine(numeros.Length); // Saída: 5
+-------------------------------------------------------------------------------------------
+string texto = "Olá, mundo!";
+Console.WriteLine(texto.Length); // Saída: 11 (inclui espaços e pontuação)
+-------------------------------------------------------------------------------------------
+
+namespace propriedadeLength
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            int[] vetIdades = new int[20];
+
+            Console.WriteLine("Tamano do vetor decladaro: {0}", vetIdades.Length);
+        }
+    }
+}
