@@ -1,0 +1,16 @@
+// Imprimindo de trás para frente, detalhes: / nome.Length -1 / i >= 0 
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        string nome = "Matheus Pinheiro Ribeiro";
+
+        Console.WriteLine("Impressão de trás para frente:");
+
+        for (int i = nome.Length -1; i >= 0; i--)
+        {
+            Console.Write("{0}", nome[i]);
+        }
+    }
+}
