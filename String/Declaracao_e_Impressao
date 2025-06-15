@@ -1,0 +1,20 @@
+// Declarando e imprimindo strings, diretamente e com laço FOR: 
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        string nome = "Matheus Pinheiro Ribeiro";
+
+        Console.WriteLine("Número de caracteres: {0}", nome.Length);
+
+        Console.WriteLine("{0}", nome);
+
+        Console.WriteLine("ou");
+
+        for (int i = 0; i < nome.Length; i++)
+        {
+            Console.Write("{0}", nome[i]);
+        }
+    }
+}
