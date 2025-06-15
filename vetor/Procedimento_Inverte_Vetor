@@ -1,0 +1,24 @@
+// Faça um procedimento que receba um vetor por parâmetro e inverta a ordem dos elementos.
+
+namespace VetorInverteOrdem
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            const int TAMANHO = 5 ;
+
+            int [] vetor = new int[TAMANHO] { 1, 2, 5, 7, 9};
+
+            InverteValores(vetor);
+        }
+
+        public static void InverteValores(int[] vet)
+        {
+            for (int i = vet.Length -1; i >= 0; i--)
+            {
+                Console.Write("{0} ", vet[i]);
+            }
+        }
+    }
+}
