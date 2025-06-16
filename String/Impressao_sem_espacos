@@ -1,0 +1,19 @@
+// Impressão sem os espaços em branco: 
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        string nome = "Matheus Pinheiro Ribeiro";
+
+        Console.WriteLine("Não imprimir os espaços:");
+
+        for (int i = 0; i < nome.Length; i++)
+        {
+            if (nome[i] != ' ')
+            {
+                 Console.Write("{0}", nome[i]);
+            }
+        }
+    }
+}
