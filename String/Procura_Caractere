@@ -1,0 +1,32 @@
+// Faça uma função que receba por parâmetro uma string e
+// um caractere e retorne o índice da primeira ocorrência do caractere na string.
+// Se a string não possuir o caractere passado por parâmetro,  a função deve retornar -1.
+
+public class Program
+{
+    public static int RetornaIndice(string mensagem, char procurado)
+    {
+        for (int i = 0; i < mensagem.Length; i++)
+        {
+            if (mensagem[i] == procurado)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static void Main(string[] args)
+    {
+        string texto;
+        char caractere;
+
+        Console.WriteLine("Informe uma string: ");
+        texto = (Console.ReadLine());
+
+        Console.WriteLine("Informe um caractere para pesquisar: ");
+        caractere = Convert.ToChar(Console.ReadLine());
+
+        Console.WriteLine("Retorno: {0}", RetornaIndice(texto, caractere));
+    }
+}
