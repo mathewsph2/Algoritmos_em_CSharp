@@ -1,0 +1,9 @@
+// O método Convert.ToInt32 quando aplicado a um char retorna o código Unicode do caractere
+
+class Program0
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(Convert.ToInt32('@'));
+    }
+}
