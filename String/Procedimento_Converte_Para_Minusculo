@@ -1,0 +1,35 @@
+// Faça um procedimento que receba uma string por parâmetro e imprima-a convertida para minúsculo.
+
+public class Program
+{
+    public static void ConverteMinuscula(string texto)
+    {
+        char letra;
+
+        for (int i = 0; i < texto.Length; i++)
+        {
+            letra = texto[i];
+
+            if ((letra >= 'A') && (letra <= 'Z'))
+            {
+                letra = Convert.ToChar(letra + 32);
+                Console.Write("{0}", letra);
+            }
+            else
+            {
+                Console.Write("{0}", letra);
+            }
+        }
+    }
+
+    public static void Main(string[] args)
+    {
+        string texto;
+
+        Console.WriteLine("Informe uma string: ");
+        texto = (Console.ReadLine());
+
+        ConverteMinuscula(texto);
+    }
+}
+
