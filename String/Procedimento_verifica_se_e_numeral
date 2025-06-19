@@ -1,0 +1,30 @@
+// Procedimento que verifica se o caractere informado é ou não um numeral.
+
+namespace VetorInverteOrdem
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            char caractere;
+
+            Console.WriteLine("Informe um caractere: ");
+            caractere = Convert.ToChar(Console.ReadLine());
+
+            LeChar(caractere);
+
+        }
+        public static void LeChar(char x)
+        {
+            if (x >= '0' && x <= '9')
+            {
+                Console.WriteLine("É um numeral!");
+            }
+
+            else
+            {
+                 Console.WriteLine("Não é um numeral!");
+            }
+        }
+    }
+}
