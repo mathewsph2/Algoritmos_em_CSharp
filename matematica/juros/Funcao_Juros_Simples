@@ -1,0 +1,47 @@
+/**  Função para calcular juros simples.
+Pontos de melhoria: Validação de entradas e tratamento de erros.
+
+J - Valor dos Juros
+C - Capital Inicial.
+i - Taxa de Juros (Expressa em forma decimal, ou seja, dividida por 100)
+t - Tempo de aplicação, em anos, meses, etc, de acordo com a taxa de juros.
+m - Montante
+**/
+
+namespace FuncaoJurosSimples
+{
+    public class Program
+    {
+
+        public static double JurosSimples(double c, double i, int t)
+        {
+            double j;
+            double m;
+
+            j = c * i * t;
+            m = c + j;
+
+            return m;
+        }
+
+        public static void Main(string[] args)
+        {
+            double capitalinicial;
+            double taxadejuros;
+            int tempodeaplicacao;
+
+            Console.WriteLine("Informe o Capital Inicial: ");
+            capitalinicial = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Informe a taxa de juros: ");
+            taxadejuros = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Informe o tempo de aplicação: ");
+            tempodeaplicacao = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("O novo valor após aplicação dos juros simples será: {0} ", JurosSimples(capitalinicial, taxadejuros, tempodeaplicacao));
+        }
+
+    }
+}
+
